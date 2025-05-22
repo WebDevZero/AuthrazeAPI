@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backend Instructions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    ul {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      list-style-type: none;
+    }
+    li {
+      padding: 8px 0;
+    }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>How to Use This Backend</h1>
+  <p>This backend handles users, messages, and admin actions. Here are the available routes you can visit or use:</p>
+
+  <ul>
+    <li><code>/users</code> – View all registered users.</li>
+    <li><code>/messages</code> – View all posted messages.</li>
+    <li><code>/admin/panel</code> – Admin panel (only accessible if your username is <code>admin</code>).</li>
+    <li><code>/board</code> – Message board page where users can post and view messages.</li>
+    <li><code>/delete-user</code> – POST endpoint to delete a user (used by admin panel).</li>
+    <li><code>/delete-message</code> – POST endpoint to delete a message (only by owner of the message).</li>
+    <li><code>/backendinstructions</code> – Shows Instructions on how to use backend.</li>
+  </ul>
+  <p>More features coming soon.</p>
+
+
+</body>
+</html>

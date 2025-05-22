@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7fc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .profile-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .profile-card h1 {
+      margin: 0 0 10px;
+    }
+
+    .profile-card p {
+      color: #555;
+    }
+
+    .btn {
+      margin-top: 20px;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+    }
+
+    .delete-btn:hover {
+      background-color: #a30000;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <h1>Profile</h1>
+    <p><strong>Username:</strong> <span id="usernameDisplay"></span></p>
+
+    <button class="btn" onclick="window.location.href='/board'">Back to Board</button>
+    <button class="btn delete-btn" id="deleteAccountBtn">Delete Account</button>
+  </div>
+
+  <script>
+    const username = localStorage.getItem("username");
+    document.getElementById("usernameDisplay").textContent = username || "Guest";
+
+    document.getElementById("deleteAccountBtn").addEventListener("click", function () {
+      if (!username) return alert("Not logged in.");
+
+      if (!confirm("Are you sure you want to delete your account? This will delete all messages made by this account. This cannot be undone.")) return;
+
+      fetch('/delete-user', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `username=${encodeURIComponent(username)}`
+      })
+      .then(res => res.text())
+      .then(msg => {
+        alert(msg);
+        localStorage.removeItem('username');
+        window.location.href = '/';
+      });
+    });
+  </script>
+</body>
+</html>
