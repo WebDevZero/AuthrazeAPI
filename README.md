@@ -4,7 +4,7 @@
 ![Express](https://img.shields.io/badge/Express.js-Backend-lightgrey.svg?logo=express)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Build Status](https://img.shields.io/badge/status-experimental-red)
-![Version](https://img.shields.io/badge/version-1.3.0-green)
+![Version](https://img.shields.io/badge/version-1.4.0-green)
 
 
 A simple and extensible backend service for a community message board application built with **Node.js**, **Express**, and **JSON file storage**. Front-End included too.
