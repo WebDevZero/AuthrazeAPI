@@ -24,6 +24,9 @@
 - Added notification popups.
 - Added backend instructions.
 
+## Version 1.4.0 - 2025-05-22
+- Added comments for better understanding.
+
 
 ---
 
