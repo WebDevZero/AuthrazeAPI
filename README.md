@@ -13,7 +13,7 @@ A simple and extensible backend service for a community message board applicatio
 
 ---
 
-> If you like the project consider following my github profile, it would help a lot! :)
+> If you like the project consider following my github profile and starring the repo, it would help a lot! :)
 
 
 ## ⚙ Features
