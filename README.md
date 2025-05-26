@@ -185,6 +185,13 @@ If you're looking to add secure authentication and authorization, consider using
 
 Always sanitize and validate inputs. Make sure to follow best practices when handling user accounts. 
 
+---
+## Thanks!
+
+Thanks for checking out this project — happy coding!
+
+---
+
 
 
 
