@@ -9,7 +9,7 @@
 
 A simple and extensible backend service for a community message board application built with **Node.js**, **Express**, and **JSON file storage**. Front-End included too ('Public').
 
->  Great for learning backend fundamentals and full-stack prototyping.
+>  Great for learning backend fundamentals and full-stack prototyping. (comments for better understanding)
 
 ---
 
